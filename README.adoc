@@ -1,0 +1,18 @@
+= RCMS, Ruby Content Management System
+
+== Project Setup
+
+https://www.postgresql.org/docs/current/static/locale.html
+https://www.postgresql.org/docs/current/static/collation.html
+
+CREATE DATABASE rcms_development WITH
+  OWNER=devel
+  ENCODING = 'UTF8'
+  LC_COLLATE = 'pt_BR.UTF-8'
+  LC_CTYPE = 'pt_BR.UTF-8'
+  TEMPLATE = template0
+  CONNECTION LIMIT=16;
+
+To use the above pt_BR thing, your *nix system must have such
+locales generated (locale-gen, etc).
+
