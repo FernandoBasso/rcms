@@ -1,18 +1,17 @@
 = RCMS, Ruby Content Management System
 
-== Project Setup
 
-https://www.postgresql.org/docs/current/static/locale.html
-https://www.postgresql.org/docs/current/static/collation.html
 
-CREATE DATABASE rcms_development WITH
-  OWNER=devel
-  ENCODING = 'UTF8'
-  LC_COLLATE = 'pt_BR.UTF-8'
-  LC_CTYPE = 'pt_BR.UTF-8'
-  TEMPLATE = template0
-  CONNECTION LIMIT=16;
+== Project Requisites
 
-To use the above pt_BR thing, your *nix system must have such
-locales generated (locale-gen, etc).
+=== admin/users and access levels
+
+Uers that manage content. They can be ‘admin’ and ‘editor’. More access
+levels can be added later if necessary.
+
+The admin can add other admins or editors. Each module (news, articles,
+songs) must have fine grained control of which user can do what. For instance,
+the user:id=9 may be only allowed to insert and edit news, but not to destroy
+them, and he may be only able to list articles, but not list or edit them.
+
 

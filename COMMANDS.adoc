@@ -1,0 +1,51 @@
+= Examples of Commands Issued During Development
+
+== Project Setup
+
+https://www.postgresql.org/docs/current/static/locale.html
+https://www.postgresql.org/docs/current/static/collation.html
+
+CREATE DATABASE rcms_development WITH
+  OWNER=devel
+  ENCODING = 'UTF8'
+  LC_COLLATE = 'pt_BR.UTF-8'
+  LC_CTYPE = 'pt_BR.UTF-8'
+  TEMPLATE = template0
+  CONNECTION LIMIT=16;
+
+CREATE DATABASE rcms_test WITH
+  OWNER=devel
+  ENCODING = 'UTF8'
+  LC_COLLATE = 'pt_BR.UTF-8'
+  LC_CTYPE = 'pt_BR.UTF-8'
+  TEMPLATE = template0
+  CONNECTION LIMIT=16;
+
+
+To use the above pt_BR thing, your *nix system must have such
+locales generated (locale-gen, etc).
+
+Useful to have postgresql running so rails attemps to discover the socket path.
+
+    rails new rcms --database=postgresql
+
+
+Create and destroy an entire resource.
+
+    rails generate scaffold post_category title:string{65} description:string{200} slug:string{64} --no-stylesheets
+    rails destroy scaffold post_category
+
+    rake db:migrate RAILS_ENV=development
+
+    rake db:test:prepare
+
+    rake routes
+
+
+
+http://stackoverflow.com/questions/3786933/how-to-avoid-rails-scaffold-to-place-model-into-namespace
+
+http://stackoverflow.com/questions/5966776/rails-scaffold-without-the-css-file
+https://launchschool.com/blog/rails-asset-pipeline-best-practices
+
+
