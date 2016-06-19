@@ -1,0 +1,17 @@
+$fg1: #333;
+$bg1: #fff;
+
+.row-top {
+  background-color: darken($bg1, 10%);
+  padding: 20px 0;
+}
+.row-content {
+  padding: 20px 0;
+}
+
+.row-footer {
+  background-color: darken($bg1, 15%);
+  p {
+    margin-top: 1rem;
+  }
+}
