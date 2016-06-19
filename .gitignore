@@ -13,3 +13,5 @@
 /tmp
 config/database.yml
 
+# We are using bootstrap 4 alpha, let's ignore it this way for now.
+app/assets/stylesheets/bootstrap/

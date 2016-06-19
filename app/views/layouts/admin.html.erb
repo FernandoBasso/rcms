@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <meta http-equiv='x-ua-compatible' content='ie=edge'>
+  <%= stylesheet_link_tag    'application', 'admin', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <title>Admin Area | RCMS</title>
+</head>
+<body>
+
+<div class='container'>
+
+
+  <div class='row top'>
+    <nav class='col-sm-12 nav-top'>
+      <div class='col-sm-3'>Admin Area</div>
+      <div class='col-sm-6'></div>
+      <div class='col-sm-2 text-xs-right'>
+        Minha Conta
+      </div>
+    </nav>
+  </div>
+
+
+  <div class='row content'>
+
+    <nav class='col-sm-3 nav-left'>
+      <ul>
+        <li>Início</li>
+        <li>Usuários</li>
+        <li>Notícias</li>
+        <li>Artigos</li>
+        <li>Contatos</li>
+      </ul>
+    </nav>
+
+    <section class='col-sm-9 model'>
+      <%= yield %>
+    </section>
+
+  </div>
+
+
+  <div class='row footer'>
+    <footer class='col-sm-12 text-xs-center'>
+      <p>Superbits Inc. <%= Time.now.strftime '%Y' %> — Use the force!</p>
+    </footer>
+  </div>
+
+</div>
+
+
+</body>
+</html>
+
