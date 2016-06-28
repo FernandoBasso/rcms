@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# Lo & behold! I am a YAML comment!
+
 one:
-  title: MyString
-  description: MyString
-  slug: MyString
+  title: Post Title One
+  description: Post Description One
+  slug: post-title-one
 
 two:
-  title: MyString
-  description: MyString
-  slug: MyString
+  title: Post Title Two
+  description: Post Description Two
+  slug: post-title-two

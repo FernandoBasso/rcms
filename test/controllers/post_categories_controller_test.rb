@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PostCategoriesControllerTest < ActionController::TestCase
+class Admin::PostCategoriesControllerTest < ActionController::TestCase
   setup do
     @post_category = post_categories(:one)
   end
@@ -21,7 +21,7 @@ class PostCategoriesControllerTest < ActionController::TestCase
       post :create, post_category: { description: @post_category.description, slug: @post_category.slug, title: @post_category.title }
     end
 
-    assert_redirected_to post_category_path(assigns(:post_category))
+    assert_redirected_to admin_post_category_path(assigns(:post_category))
   end
 
   test "should show post_category" do
@@ -36,7 +36,7 @@ class PostCategoriesControllerTest < ActionController::TestCase
 
   test "should update post_category" do
     patch :update, id: @post_category, post_category: { description: @post_category.description, slug: @post_category.slug, title: @post_category.title }
-    assert_redirected_to post_category_path(assigns(:post_category))
+    assert_redirected_to admin_post_category_path(assigns(:post_category))
   end
 
   test "should destroy post_category" do
@@ -44,6 +44,6 @@ class PostCategoriesControllerTest < ActionController::TestCase
       delete :destroy, id: @post_category
     end
 
-    assert_redirected_to post_categories_path
+    assert_redirected_to admin_post_categories_path
   end
 end

@@ -21,4 +21,5 @@ class PostCategoryTest < ActiveSupport::TestCase
     assert_not post_category.save, 'Saved PostCategory with description less than 10 chars.'
   end
 
+
 end
