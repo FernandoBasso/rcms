@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class Admin::PostCategoriesControllerTest < ActionController::TestCase
+
   setup do
     @post_category = post_categories(:one)
   end

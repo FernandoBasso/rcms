@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+# My Beloved `tags` file can't go here. Sorry tags.
+tags
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep

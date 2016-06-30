@@ -8,11 +8,21 @@ class Admin::PostCategoriesController < Admin::ApplicationController
   # GET /post_categories.json
   def index
     @post_categories = PostCategory.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @post_categories }
+    end
   end
 
   # GET /post_categories/1
   # GET /post_categories/1.json
   def show
+    @post_category = PostCategory.find(params[:id])
+    respond_to do |fmt|
+      fmt.html
+      fmt.json { render json: @post_category }
+    end
   end
 
   # GET /post_categories/new
