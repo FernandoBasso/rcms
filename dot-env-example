@@ -1,0 +1,20 @@
+#
+# ✔ ☺
+# Rename/copy this file to ‘.env’. It should be in the root
+# of your rails app.
+#
+# Remember to add 'dotenv-rails' to your gem file for development environment.
+#
+
+RCMS_DATABASE_DEVELOPMENT_DBNAME=my_dev_db_name
+RCMS_DATABASE_DEVELOPMENT_USERNAME=my_dev_db_user
+RCMS_DATABASE_DEVELOPMENT_PASSWORD=my_dev_db_pass
+
+RCMS_DATABASE_TEST_DBNAME=my_test_db_name
+RCMS_DATABASE_TEST_USERNAME=my_test_db_user
+RCMS_DATABASE_TEST_PASSWORD=my_test_db_pass
+
+RCMS_DATABASE_PRODUCTION_DBNAME=my_prod_db_name
+RCMS_DATABASE_PRODUCTION_USERNAME=my_prod_db_user
+RCMS_DATABASE_PRODUCTION_PASSWORD=my_prod_db_pass
+

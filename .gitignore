@@ -10,6 +10,9 @@
 # My Beloved `tags` file can't go here. Sorry tags.
 tags
 
+# .env used only locally but should not commit sensitive information anyway.
+.env
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
