@@ -1,4 +1,4 @@
-class Admin::PostCategoriesController < Admin::ApplicationController
+class Admin::PostCategoriesController < ApplicationController
 
   before_action :set_post_category, only: [:show, :edit, :update, :destroy]
 

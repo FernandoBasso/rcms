@@ -15,3 +15,8 @@ the user:id=9 may be only allowed to insert and edit news, but not to destroy
 them, and he may be only able to list articles, but not list or edit them.
 
 
+== Post Categories
+
+BEHOLD: When destroying a post category, all the posts in that category are
+also destroyed.
+

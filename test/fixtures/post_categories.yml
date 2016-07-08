@@ -2,12 +2,12 @@
 
 # Lo & behold! I am a YAML comment!
 
-one:
+post_category_one:
   title: Post Title One
   description: Post Description One
   slug: post-title-one
 
-two:
+post_category_two:
   title: Post Title Two
   description: Post Description Two
   slug: post-title-two

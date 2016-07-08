@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   namespace 'admin' do
     resources :post_categories
+    resources :posts
   end
 end
