@@ -25,6 +25,9 @@ class Admin::PostsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to admin_post_url(Post.last)
+
+    # TODO: When post doesn't pass validation, new is rendered
+    # again but we need to make sure all @post_categories is available.
   end
 
   test "should show post" do
@@ -40,6 +43,9 @@ class Admin::PostsControllerTest < ActionDispatch::IntegrationTest
   test "should update post" do
     patch admin_post_url(@post_one), params: { post: @post_one.attributes }
     assert_redirected_to admin_posts_url
+
+    # TODO: When post doesn't pass validation, edit is rendered
+    # again but we need to make sure all @post_categories is available.
   end
 
   test "should destroy post" do
