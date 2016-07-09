@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= label_tag(:post_category_id) %>
-    <%= select('post', :post_category_id, PostCategory.all.collect {|pc| [pc.title, pc.id]}, prompt: 'Select...') %>
+    <%= f.label(:post_category_id) %>
+    <%= f.select(:post_category_id, PostCategory.all.collect {|pc| [pc.title, pc.id]}, prompt: 'Select...') %>
   </div>
   <div class="field">
     <%= f.label :title %><br>
