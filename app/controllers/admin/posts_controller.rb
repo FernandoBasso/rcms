@@ -1,5 +1,6 @@
 class Admin::PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post_categories, only: [:new, :create, :edit, :update]
 
   layout 'admin'
 
@@ -30,9 +31,6 @@ class Admin::PostsController < ApplicationController
   # POST /admin/posts.json
   def create
     @post = Post.new(post_params)
-    puts '----------------'
-    p @post
-    puts '----------------'
 
     respond_to do |format|
       if @post.save
@@ -73,6 +71,10 @@ class Admin::PostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
+    end
+
+    def set_post_categories
+      @post_categories = PostCategory.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

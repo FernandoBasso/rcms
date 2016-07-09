@@ -10,7 +10,6 @@ class Admin::PostCategoriesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get admin_post_categories_path
     assert_response :success
-    #assert_not_nil assigns(:post_categories)
   end
 
   test "should get new" do

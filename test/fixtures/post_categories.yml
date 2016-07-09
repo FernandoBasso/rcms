@@ -3,11 +3,11 @@
 # Lo & behold! I am a YAML comment!
 
 post_category_one:
-  title: Post Title One
-  description: Post Description One
-  slug: post-title-one
+  title: Post Category One
+  description: Post Category Description One
+  slug: post-category-one
 
 post_category_two:
-  title: Post Title Two
-  description: Post Description Two
-  slug: post-title-two
+  title: Post Category Two
+  description: Post Category Description Two
+  slug: post-category-two
