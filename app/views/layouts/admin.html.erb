@@ -21,7 +21,7 @@
         <div class='col-sm-3'>Admin Area</div>
         <div class='col-sm-6'></div>
         <div class='col-sm-2 text-xs-right'>
-          Minha Conta
+          <%= t(:my_account, scope: :menus) %>
         </div>
       </nav>
     </div>
@@ -40,19 +40,19 @@
 
       <nav class='col-sm-3 nav-left'>
         <ul class='nav nav-pills nav-stacked'>
-          <li class='nav-item'><a href='#' class='nav-link'>Início</a></li>
-          <li class='nav-item'><a href='#' class='nav-link'>Usuários</a></li>
+          <li class='nav-item'><a href='#' class='nav-link'><%= t(:home, scope: :menus) %></a></li>
+          <li class='nav-item'><a href='#' class='nav-link'><%= t(:users, scope: :menus) %></a></li>
           <li class='nav-item'>
-            <%= link_to 'Post Categories', admin_post_categories_path,
+            <%= link_to t(:post_categories, scope: :menus), admin_post_categories_path,
               class: "nav-link #{active_css_class('admin/post_categories')}" %>
           </li>
           <li class='nav-item'>
-            <%= link_to 'Posts', admin_posts_path,
+            <%= link_to t(:posts, scope: :menus), admin_posts_path,
               class: "nav-link #{active_css_class('admin/posts')}" %>
           </li>
-          <li class='nav-item'><a href='#' class='nav-link'>Notícias</a></li>
-          <li class='nav-item'><a href='#' class='nav-link disabled'>Videos</a></li>
-          <li class='nav-item'><a href='#' class='nav-link'>Contatos</a></li>
+          <li class='nav-item'><a href='#' class='nav-link'><%= t(:news, scope: :menus) %></a></li>
+          <li class='nav-item'><a href='#' class='nav-link disabled'><%= t(:videos, scope: :menus) %></a></li>
+          <li class='nav-item'><a href='#' class='nav-link'><%= t(:contacts, scope: :menus) %></a></li>
         </ul>
       </nav> <!-- .nav-left -->
 

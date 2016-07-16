@@ -1,0 +1,129 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+# TODO: Consider using:
+# https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/pt-BR.yml
+
+pt-BR:
+
+  errors:
+    # By default, active record errors show someting like
+    #   <SomeModelName> bla bla blah
+    # because the default format is "%{model} {$message}".
+    format: "%{message}"
+
+  menus:
+    my_account: 'Minha Conta'
+    home: 'Início'
+    users: 'Usuários'
+    post_categories: 'Categorias de Publicações'
+    posts: 'Publicações'
+    news: 'Notícias'
+    videos: 'Vídeos'
+    contacts: 'Contatos'
+
+  admin:
+    post_categories:
+      index: 'Listando categorias de publicação'
+      new: 'Nova categoria de publicação'
+      create:
+        success: 'Categoria de Publicação adicionada com sucesso!'
+        error: 'Erro ao adicionar categoria de publicação.'
+      edit: 'Editando categoria de publicação “%{title}”'
+      update:
+        success: 'Categoria de Publicação modificada com sucesso!'
+        error: 'Erro ao modificada categoria de publicação.'
+      destroy:
+        success: 'Categoria de Publicação excluída com successo!'
+        error: 'Erro ao excluír categoria de publicação.'
+    posts:
+      create:
+        success: 'Publicação adicionada com suceesso!'
+        error: 'Erro ao adicionar publicação.'
+      update:
+        success: 'Publicação modificada com suceesso!'
+        error: 'Erro ao modificar publicação.'
+      destroy:
+        success: 'Publicação excluída com sucesso!'
+        error: 'Erro ao excluír publicação.'
+
+  activerecord:
+    errors:
+      models:
+        post_category:
+          attributes:
+            title:
+                blank: 'O título da categoria de publicação deve ser informado.'
+                too_short:
+                  one: 'O titulo da categoria de publicação deve ter pelo menos 1 carctere.'
+                  other: 'O titulo da categoria de publicação deve ter pelo menos %{count} carcteres.'
+                too_long:
+                  one: 'O titulo da categoria de publicação deve ter no máximo 1 carctere.'
+                  other: 'O titulo da categoria de publicação deve ter no máximo %{count} carcteres.'
+            description:
+                blank: 'A descrição da publicação deve ser informado.'
+                too_short:
+                  one: 'A descrição da publicação deve ter pelo menos 1 carctere.'
+                  other: 'A descrição da publicação deve ter pelo menos %{count} carcteres.'
+                too_long:
+                  one: 'A descrição da publicação deve ter no máximo 1 carctere.'
+                  other: 'A descrição da publicação deve ter no máximo %{count} carcteres.'
+            text:
+                blank: 'O slug da publicação deve ser informado.'
+                too_short:
+                  one: 'O slug da categoria de publicação deve ter pelo menos 1 caractere.'
+                  other: 'O slug da categoria de publicação deve ter pelo menos %{count} caracteres.'
+                too_long:
+                  one: 'O slug da categoria de publicação deve ter no máximo 1 caractere.'
+                  other: 'O slug da categoria de publicação deve ter no máximo %{count} caracteres.'
+        post:
+          attributes:
+            title:
+                blank: 'O título da publicação deve ser informado.'
+                too_short:
+                  one: 'O titulo da publicação deve ter pelo menos 1 carctere.'
+                  other: 'O titulo da publicação deve ter pelo menos %{count} carcteres.'
+                too_long:
+                  one: 'O titulo da publicação deve ter no máximo 1 carctere.'
+                  other: 'O titulo da publicação deve ter no máximo %{count} carcteres.'
+            intro:
+                blank: 'A intro da publicação deve ser informado.'
+                too_short:
+                  one: 'A intro da publicação deve ter pelo menos 1 carctere.'
+                  other: 'A intro da categoria de publicação deve ter pelo menos %{count} carcteres.'
+                too_long:
+                  one: 'A intro da publicação deve ter no máximo 1 carctere.'
+                  other: 'A intro da publicação deve ter no máximo %{count} carcteres.'
+            text:
+                blank: 'O texto da publicação deve ser informado.'
+                too_short:
+                  one: 'O texto da publicação deve ter pelo menos 1 caractere.'
+                  other: 'O texto da publicação deve ter pelo menos %{count} caracteres.'
+                too_long:
+                  one: 'O texto da publicação deve ter no máximo 1 caractere.'
+                  other: 'O texto da publicação deve ter no máximo %{count} caracteres.'
+
+  general:
+    error_found:
+      one: '1 erro encontrado:'
+      other: '%{count} erros encontrados:'
+
+

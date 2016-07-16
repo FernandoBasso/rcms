@@ -20,4 +20,109 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  errors:
+    # By default, active record errors show someting like
+    #   <SomeModelName> bla bla blah
+    # because the default format is "%{model} {$message}".
+    format: "%{message}"
+
+  menus:
+    my_account: 'My Account'
+    home: 'Home'
+    users: 'Users'
+    post_categories: 'Post Categories'
+    posts: 'Posts'
+    news: 'News'
+    videos: 'Videos'
+    contacts: 'Contacts'
+
+  admin:
+    post_categories:
+      index: 'Listing post categories'
+      new: 'New post category'
+      create:
+        success: 'Post category successfully created!'
+        error: 'Error creating post category.'
+      edit: 'Editing post category “%{title}”'
+      update:
+        success: 'Post category successfully modified!'
+        error: 'Error modifying post category.'
+      destroy:
+        success: 'Post category successfully destroyed!'
+        error: 'Error destroying post category.'
+    posts:
+      index: 'Listando publicações'
+      new: 'Nova publicação'
+      create:
+        success: 'Post successfully created!'
+        error: 'Error creating post.'
+      update:
+        success: 'Post successfully modified!'
+        error: 'Error modifying post.'
+      destroy:
+        success: 'Post destroyed successfully!'
+        error: 'Error destroying post.'
+
+  activerecord:
+    errors:
+      models:
+        post_category:
+          attributes:
+            title:
+                blank: 'Post category title must be provided.'
+                too_short:
+                  one: 'Post category title must have at least one character'
+                  other: 'Post category title must have at least %{count} characters'
+                too_long:
+                  one: 'Post category title must have at most one character'
+                  other: 'Post category title must have at most %{count} characters'
+            description:
+                blank: 'Post category description must be provided.'
+                too_short:
+                  one: 'Post category description must have at least 1 character'
+                  other: 'Post category description must have at least %{count} characters'
+                too_long:
+                  one: 'Post category description must have at most 1 character'
+                  other: 'Post category description must have at most %{count} characters'
+            slug:
+                blank: 'Post category slug must be provided.'
+                too_short:
+                  one: 'Post category slug must have at least 1 character'
+                  other: 'Post category slug must have at last %{count} characters'
+                too_long:
+                  one: 'Post category slug must have at most 1 character'
+                  other: 'Post category slug must have at last %{count} characters'
+        post:
+          attributes:
+            title:
+                blank: 'Post title must be provided.'
+                too_short:
+                  one: 'Post title must have at least one character'
+                  other: 'Post title must have at least %{count} characters'
+                too_long:
+                  one: 'Post title must have at most one character'
+                  other: 'Post title must have at most %{count} characters'
+            description:
+                blank: 'Post description must be provided.'
+                too_short:
+                  one: 'Post description must have at least 1 character'
+                  other: 'Post description must have at least %{count} characters'
+                too_long:
+                  one: 'Post description must have at most 1 character'
+                  other: 'Post description must have at most %{count} characters'
+            text:
+                blank: 'Post text must be provided.'
+                too_short:
+                  one: 'Post text must have at least 1 character'
+                  other: 'Post text must have at last %{count} characters'
+                too_long:
+                  one: 'Post text must have at most 1 character'
+                  other: 'Post text must have at last %{count} characters'
+
+
+  random:
+    error_found:
+      one: '1 error found:'
+      other: '%{count} errors found:'
+

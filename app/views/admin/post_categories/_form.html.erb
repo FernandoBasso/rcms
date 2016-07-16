@@ -1,7 +1,7 @@
 <%= form_for([:admin, @post_category], html: { class: 'admin-form' }) do |f| %>
   <% if @post_category.errors.any? %>
     <div id='error_explanation'>
-      <h2><%= pluralize(@post_category.errors.count, 'error') %> prohibited this post_category from being saved:</h2>
+      <h2><%= t('general.error_found', count: @post_category.errors.count) %></h2>
 
       <ul>
       <% @post_category.errors.full_messages.each do |message| %>
