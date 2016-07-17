@@ -1,0 +1,68 @@
+en:
+  activerecord:
+
+    attributes:
+      post:
+        title: 'Title'
+        intro: 'Introduction'
+        text: 'Text'
+        post_category_id: 'Post category'
+      post_category:
+        title: 'Title'
+        description: 'Description'
+        slug: 'Slug'
+
+    errors:
+      models:
+        post_category:
+          attributes:
+            title:
+                blank: 'Post category title must be provided.'
+                too_short:
+                  one: 'Post category title must have at least one character'
+                  other: 'Post category title must have at least %{count} characters'
+                too_long:
+                  one: 'Post category title must have at most one character'
+                  other: 'Post category title must have at most %{count} characters'
+            description:
+                blank: 'Post category description must be provided.'
+                too_short:
+                  one: 'Post category description must have at least 1 character'
+                  other: 'Post category description must have at least %{count} characters'
+                too_long:
+                  one: 'Post category description must have at most 1 character'
+                  other: 'Post category description must have at most %{count} characters'
+            slug:
+                blank: 'Post category slug must be provided.'
+                too_short:
+                  one: 'Post category slug must have at least 1 character'
+                  other: 'Post category slug must have at last %{count} characters'
+                too_long:
+                  one: 'Post category slug must have at most 1 character'
+                  other: 'Post category slug must have at last %{count} characters'
+        post:
+          attributes:
+            title:
+                blank: 'Post title must be provided.'
+                too_short:
+                  one: 'Post title must have at least one character'
+                  other: 'Post title must have at least %{count} characters'
+                too_long:
+                  one: 'Post title must have at most one character'
+                  other: 'Post title must have at most %{count} characters'
+            description:
+                blank: 'Post description must be provided.'
+                too_short:
+                  one: 'Post description must have at least 1 character'
+                  other: 'Post description must have at least %{count} characters'
+                too_long:
+                  one: 'Post description must have at most 1 character'
+                  other: 'Post description must have at most %{count} characters'
+            text:
+                blank: 'Post text must be provided.'
+                too_short:
+                  one: 'Post text must have at least 1 character'
+                  other: 'Post text must have at last %{count} characters'
+                too_long:
+                  one: 'Post text must have at most 1 character'
+                  other: 'Post text must have at last %{count} characters'

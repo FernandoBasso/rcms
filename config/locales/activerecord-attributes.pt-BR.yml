@@ -1,0 +1,69 @@
+pt-BR:
+  activerecord:
+
+    attributes:
+      post:
+        title: 'Título'
+        intro: 'Introdução'
+        text: 'Texto'
+        post_category_id: 'Categoria da publicação'
+      post_category:
+        title: 'Título'
+        description: 'Descrição'
+        slug: 'Slug'
+
+    errors:
+      models:
+        post_category:
+          attributes:
+            title:
+                blank: 'O título da categoria de publicação deve ser informado.'
+                too_short:
+                  one: 'O titulo da categoria de publicação deve ter pelo menos 1 carctere.'
+                  other: 'O titulo da categoria de publicação deve ter pelo menos %{count} carcteres.'
+                too_long:
+                  one: 'O titulo da categoria de publicação deve ter no máximo 1 carctere.'
+                  other: 'O titulo da categoria de publicação deve ter no máximo %{count} carcteres.'
+            description:
+                blank: 'A descrição da publicação deve ser informado.'
+                too_short:
+                  one: 'A descrição da publicação deve ter pelo menos 1 carctere.'
+                  other: 'A descrição da publicação deve ter pelo menos %{count} carcteres.'
+                too_long:
+                  one: 'A descrição da publicação deve ter no máximo 1 carctere.'
+                  other: 'A descrição da publicação deve ter no máximo %{count} carcteres.'
+            text:
+                blank: 'O slug da publicação deve ser informado.'
+                too_short:
+                  one: 'O slug da categoria de publicação deve ter pelo menos 1 caractere.'
+                  other: 'O slug da categoria de publicação deve ter pelo menos %{count} caracteres.'
+                too_long:
+                  one: 'O slug da categoria de publicação deve ter no máximo 1 caractere.'
+                  other: 'O slug da categoria de publicação deve ter no máximo %{count} caracteres.'
+        post:
+          attributes:
+            title:
+                blank: 'O título da publicação deve ser informado.'
+                too_short:
+                  one: 'O titulo da publicação deve ter pelo menos 1 carctere.'
+                  other: 'O titulo da publicação deve ter pelo menos %{count} carcteres.'
+                too_long:
+                  one: 'O titulo da publicação deve ter no máximo 1 carctere.'
+                  other: 'O titulo da publicação deve ter no máximo %{count} carcteres.'
+            intro:
+                blank: 'A intro da publicação deve ser informado.'
+                too_short:
+                  one: 'A intro da publicação deve ter pelo menos 1 carctere.'
+                  other: 'A intro da categoria de publicação deve ter pelo menos %{count} carcteres.'
+                too_long:
+                  one: 'A intro da publicação deve ter no máximo 1 carctere.'
+                  other: 'A intro da publicação deve ter no máximo %{count} carcteres.'
+            text:
+                blank: 'O texto da publicação deve ser informado.'
+                too_short:
+                  one: 'O texto da publicação deve ter pelo menos 1 caractere.'
+                  other: 'O texto da publicação deve ter pelo menos %{count} caracteres.'
+                too_long:
+                  one: 'O texto da publicação deve ter no máximo 1 caractere.'
+                  other: 'O texto da publicação deve ter no máximo %{count} caracteres.'
+

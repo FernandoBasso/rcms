@@ -41,7 +41,7 @@ class Admin::PostCategoriesController < ApplicationController
 
     respond_to do |format|
       if @post_category.save
-        format.html { redirect_to admin_post_category_path(@post_category), notice: 'Post category was successfully created.' }
+        format.html { redirect_to admin_post_category_path(@post_category), notice: t('.success') }
         format.json { render :show, status: :created, location: @post_category }
       else
         format.html { render :new }
@@ -55,7 +55,7 @@ class Admin::PostCategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @post_category.update(post_category_params)
-        format.html { redirect_to admin_post_category_path(@post_category), notice: 'Post category was successfully updated.' }
+        format.html { redirect_to admin_post_category_path(@post_category), notice: t('.success') }
         format.json { render :show, status: :ok, location: @post_category }
       else
         format.html { render :edit }
@@ -69,7 +69,7 @@ class Admin::PostCategoriesController < ApplicationController
   def destroy
     @post_category.destroy
     respond_to do |format|
-      format.html { redirect_to admin_post_categories_url, notice: 'Post category was successfully destroyed.' }
+      format.html { redirect_to admin_post_categories_url, notice: t('.success') }
       format.json { head :no_content }
     end
   end
