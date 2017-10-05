@@ -12,10 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20160705011645) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "post_categories", force: :cascade do |t|
+  create_table "post_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string   "title",       limit: 64
     t.string   "description", limit: 200
     t.string   "slug",        limit: 64
@@ -23,13 +20,13 @@ ActiveRecord::Schema.define(version: 20160705011645) do
     t.datetime "updated_at",              null: false
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string   "title",            limit: 128
     t.string   "intro",            limit: 200
-    t.text     "text"
+    t.text     "text",             limit: 65535
     t.integer  "post_category_id"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.index ["post_category_id"], name: "index_posts_on_post_category_id", using: :btree
   end
 

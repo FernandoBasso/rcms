@@ -26,26 +26,29 @@ class Admin::PostCategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show post_category" do
-    get admin_post_category_url(@post_category_one.id)
+    post_category = post_categories(:post_category_one)
+    get admin_post_category_url(id: post_category.id)
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_admin_post_category_url(@post_category_one)
+  test "should edit post_category" do
+    get edit_admin_post_category_url(id: @post_category_two.id)
     assert_response :success
   end
 
   test "should update post_category" do
-    patch admin_post_category_url(@post_category_one), params: { post_category: @post_category_two.attributes }
+    patch admin_post_category_url(id: @post_category_one.id),
+        params: { post_category: @post_category_two.attributes }
 
     assert_redirected_to admin_post_category_url(@post_category_one)
   end
 
   test "should destroy post_category" do
     assert_difference('PostCategory.count', -1) do
-      delete admin_post_category_url(@post_category_one)
+        delete admin_post_category_url(id: @post_category_one.id)
     end
 
-    assert_redirected_to admin_post_categories_url
+    assert_redirected_to admin_post_categories_path
   end
 end
+

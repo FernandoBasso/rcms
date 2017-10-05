@@ -18,9 +18,8 @@ class Admin::PostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create post" do
     assert_difference('Post.count') do
-      # If we just pass "@post" it is a string because it comes from
-      # the fixtures. For some reason, it is not a hash. So, we need to
-      # that its attributes so it ‘becomes’ a hash.
+      # Post needs a category as a FK.
+      @post_one.post_category = post_categories(:post_category_one);
       post admin_posts_url, params: { post: @post_one.attributes }
     end
 
@@ -31,17 +30,18 @@ class Admin::PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show post" do
-    get admin_post_url(@post_one)
+    get admin_post_url(id: @post_one.id)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_admin_post_url(@post_one)
+    get edit_admin_post_url(id: @post_one.id)
     assert_response :success
   end
 
   test "should update post" do
-    patch admin_post_url(@post_one), params: { post: @post_one.attributes }
+    patch admin_post_url(id: @post_one.id),
+      params: { post: @post_one.attributes }
     assert_redirected_to admin_posts_url
 
     # TODO: When post doesn't pass validation, edit is rendered
@@ -50,7 +50,7 @@ class Admin::PostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy post" do
     assert_difference('Post.count', -1) do
-      delete admin_post_url(@post_one)
+      delete admin_post_url(id: @post_one.id)
     end
 
     assert_redirected_to admin_posts_url

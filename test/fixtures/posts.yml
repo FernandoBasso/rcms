@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 post_one:
+  id: 10
   title: My Post One
   intro: Intro Post One
   text: Text Post One
   post_category: post_category_one
 
 post_two:
+  id: 20
   title: My Post Two
   intro: Intro Post Two
   text: Text Post Two
   post_category: post_category_two
+

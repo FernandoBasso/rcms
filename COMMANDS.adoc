@@ -5,21 +5,28 @@
 https://www.postgresql.org/docs/current/static/locale.html
 https://www.postgresql.org/docs/current/static/collation.html
 
-CREATE DATABASE rcms_development WITH
-  OWNER=devel
-  ENCODING = 'UTF8'
-  LC_COLLATE = 'pt_BR.UTF-8'
-  LC_CTYPE = 'pt_BR.UTF-8'
-  TEMPLATE = template0
-  CONNECTION LIMIT=16;
+== PostgreSQL:
 
-CREATE DATABASE rcms_test WITH
-  OWNER=devel
-  ENCODING = 'UTF8'
-  LC_COLLATE = 'pt_BR.UTF-8'
-  LC_CTYPE = 'pt_BR.UTF-8'
-  TEMPLATE = template0
-  CONNECTION LIMIT=16;
+    CREATE DATABASE rcms_devel WITH
+      OWNER=devel
+      ENCODING = 'UTF8'
+      LC_COLLATE = 'pt_BR.UTF-8'
+      LC_CTYPE = 'pt_BR.UTF-8'
+      TEMPLATE = template0
+      CONNECTION LIMIT=16;
+
+    CREATE DATABASE rcms_test WITH
+      OWNER=devel
+      ENCODING = 'UTF8'
+      LC_COLLATE = 'pt_BR.UTF-8'
+      LC_CTYPE = 'pt_BR.UTF-8'
+      TEMPLATE = template0
+      CONNECTION LIMIT=16;
+
+== MariaDB
+
+    CREATE DATABASE rcms_devel DEFAULT CHARSET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
+    CREATE DATABASE rcms_test DEFAULT CHARSET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
 
 
 To use the above pt_BR thing, your *nix system must have such
@@ -47,5 +54,8 @@ http://stackoverflow.com/questions/3786933/how-to-avoid-rails-scaffold-to-place-
 
 http://stackoverflow.com/questions/5966776/rails-scaffold-without-the-css-file
 https://launchschool.com/blog/rails-asset-pipeline-best-practices
+
+  rails generate model Post title:string{128} intro:string{250} text:text post_category:references
+
 
 

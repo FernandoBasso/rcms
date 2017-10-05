@@ -1,0 +1,13 @@
+# .editorconfig
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf8
+indent_style = space
+trim_trailing_whitespace = true
+
+
+[*.{rb,erb,yml}]
+indent_size = 2
+
